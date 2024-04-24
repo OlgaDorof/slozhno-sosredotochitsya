@@ -1,5 +1,4 @@
 .page {
-  padding: 10px;
   color: var(--color-text);
   font-family: IBM Plex mono, sans-serif;
   font-size: 18px;
@@ -17,15 +16,16 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
-  min-height: 648px;
-  margin-block-end: 50px;
+  min-height: 668px;
+  margin-block-end: 40px;
+  padding: 10px;
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 10px;
+  right: 10px;
   width: 25px;
   height: 25px;
   border-inline-end: 1px var(--color-title) solid;
@@ -35,8 +35,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 10px;
+  left: 10px;
   width: 25px;
   height: 25px;
   border-inline-start: 1px var(--color-title) solid;
@@ -45,8 +45,8 @@
 
 .decoration {
   position: absolute;
-  top: 0px;
-  right: 9px;
+  top: 10px;
+  right: 19px;
   display: var(--display);
   justify-content: center;
   align-items: center;
@@ -128,6 +128,10 @@
   background-color: var(--accent-color);
 }
 
+main {
+  padding: 0px 10px;
+}
+
 .section {
   margin-block-end: 50px;
 }
@@ -179,6 +183,10 @@
   color: var(--color-subtitle);
 }
 
+.images {
+  margin-block-end: 40px;
+}
+
 .gallery__image {
   display: block;
   width: 100%;
@@ -202,8 +210,8 @@
 .footer {
   position: relative;
   height: 100vh;
-  height: 100vh;
   min-height: 668px;
+  padding: 10px;
 }
 
 .footer__title {
@@ -214,19 +222,31 @@
 @media (width>= 768px) {
   .header,
   .footer {
-    min-height: 984px;
-  }
-
-  .page {
+    min-height: 1024px;
     padding: 20px;
   }
 
   .header {
-    margin-block-end: 80px;
+    margin-block-end: 60px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decoration {
+    top: 20px;
+    right: 29px;
   }
 
   .header__theme-menu {
-    padding: 172px 0;
+    padding: 173px 0;
   }
 
   .main__title {
@@ -241,6 +261,10 @@
     margin: auto 0 auto 50%;
   }
 
+  main {
+    padding: 0px 20px;
+  }
+
   .section {
     margin-block-end: 80px;
   }
@@ -253,6 +277,10 @@
 
   .reason__title {
     width: 32%;
+  }
+
+  .images {
+    margin-block-end: 60px;
   }
 
   .gallery {
@@ -286,7 +314,7 @@
 @media (width>= 1024px) {
   .header,
   .footer {
-    min-height: 728px;
+    min-height: 768px;
   }
 
   .main__title {

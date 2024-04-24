@@ -2,17 +2,15 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-:root{
+:root {
   --accent-color: #ff8dcb;
   --background-color: #ff8dcb;
   --color-hover: rgb(50, 49, 45);
   --color-title: #353430;
-  --color-shadow:#ff0070;
-  --color-header:#ffc2e6;
+  --color-shadow: #ff0070;
+  --color-header: #ffc2e6;
   --color-text: #353430;
-  --color-subtitle:#353430;
+  --color-subtitle: #353430;
   --background-image: url(../images/cover-image-light.png);
-  --display:none;
+  --display: none;
 }
-
-
