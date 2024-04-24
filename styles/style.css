@@ -1,5 +1,325 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding: 10px;
+  color: var(--color-text);
+  font-family: IBM Plex mono, sans-serif;
+  font-size: 18px;
+  line-height: 130%;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: 100vh;
+  min-height: 648px;
+  margin-block-end: 50px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 25px;
+  height: 25px;
+  border-inline-end: 1px var(--color-title) solid;
+  border-block-start: 1px var(--color-title) solid;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px var(--color-title) solid;
+  border-block-end: 1px var(--color-title) solid;
+}
+
+.decoration {
+  position: absolute;
+  top: 0px;
+  right: 9px;
+  display: var(--display);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.decoration::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  padding: 65px 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--color-title);
+  line-height: 18px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 1.5px 13px;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-hover);
+  opacity: 40%;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--color-hover);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--color-text);
+  pointer-events: none;
+}
+
+.main__title {
+  color: var(--color-header);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0px var(--color-shadow);
+}
+
+.header__title {
+  margin-inline-start: -10px;
+}
+
+.header__text {
+  margin: auto 0;
+  color: var(--color-subtitle);
+}
+
+.accent__text {
+  font-weight: 700;
+  background-color: var(--accent-color);
+}
+
+.section {
+  margin-block-end: 50px;
+}
+
+.title {
+  margin-block-end: 20px;
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.card {
+  margin-block-end: 20px;
+}
+
+.card:last-child {
+  margin-block-end: 0px;
+}
+
+.card__title {
+  margin-block-end: 10px;
+  color: var(--color-subtitle);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.shadow {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.shadow:hover {
+  text-decoration: underline;
+}
+
+.shadow:focus {
+  outline: none;
+}
+
+.shadow:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.thin {
+  font-weight: normal;
+}
+
+.subtitle {
+  color: var(--color-subtitle);
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-block-end: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery__image:last-child {
+  margin-block-end: 0;
+}
+
+.images__title {
+  margin-block-end: 10px;
+  color: var(--color-subtitle);
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.footer__title {
+  padding: 276px 0px;
+  text-align: center;
+}
+
+@media (width>= 768px) {
+  .header,
+  .footer {
+    min-height: 984px;
+  }
+
+  .page {
+    padding: 20px;
+  }
+
+  .header {
+    margin-block-end: 80px;
+  }
+
+  .header__theme-menu {
+    padding: 172px 0;
+  }
+
+  .main__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+  }
+
+  .header__text {
+    margin: auto 0 auto 50%;
+  }
+
+  .section {
+    margin-block-end: 80px;
+  }
+
+  .horizont {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    gap: 20px;
+  }
+
+  .reason__title {
+    width: 32%;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 192px 230px 318px;
+    gap: 20px;
+  }
+
+  .gallery__image {
+    margin-block-end: 0px;
+  }
+
+  .inline {
+    grid-column: span 2;
+  }
+
+  .block {
+    grid-row: span 2;
+  }
+
+  .images__title {
+    margin-block-end: 20px;
+  }
+
+  .footer__title {
+    padding: 443px 0px;
+  }
+}
+
+@media (width>= 1024px) {
+  .header,
+  .footer {
+    min-height: 728px;
+  }
+
+  .main__title {
+    text-shadow: 4px 4px 0px var(--color-shadow);
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    padding: 0px 0px 275px;
+  }
+
+  .header__text {
+    margin: auto 0px auto 50%;
+  }
+
+  .reason__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .reason__card {
+    margin-block-end: 0px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .gallery {
+    grid-template-rows: 260px 315px 428px;
+  }
+  .footer__title {
+    padding: 299px 0px;
+  }
 }
