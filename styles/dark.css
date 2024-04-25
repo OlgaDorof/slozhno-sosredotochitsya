@@ -1,7 +1,7 @@
 .page.theme_dark {
   --accent-color: #ff0070;
   --background-color: #000028;
-  --color-hover: #ff0070;
+  --color-hover: rgba(255, 0, 112, 0.4);
   --color-title: #ff0070;
   --color-shadow: #ff0070;
   --color-header: #db00ff;
@@ -15,7 +15,7 @@
   :root {
     --accent-color: #ff0070;
     --background-color: #000028;
-    --color-hover: #ff0070;
+    --color-hover: rgba(255, 0, 112, 0.4);
     --color-title: #ff0070;
     --color-shadow: #ff0070;
     --color-header: #db00ff;

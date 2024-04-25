@@ -5,7 +5,7 @@
 :root {
   --accent-color: #ff8dcb;
   --background-color: #ffeff8;
-  --color-hover: rgb(50, 49, 45);
+  --color-hover: rgba(50, 49, 45, 0.4);
   --color-title: #353430;
   --color-shadow: #ff0070;
   --color-header: #ffc2e6;
@@ -13,4 +13,5 @@
   --color-subtitle: #353430;
   --background-image: url(../images/cover-image-light.png);
   --display: none;
+  --font-family: IBM Plex mono, monospace;
 }
